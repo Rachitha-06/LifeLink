@@ -1,1 +1,69 @@
+@import 'tailwindcss';
 
+/*
+ * Design tokens ported 1:1 from the original Frontend.html :root block,
+ * so the existing LifeLink visual identity carries over rather than being
+ * redesigned. Each --color-* / --font-* / --radius-* / --shadow-* var below
+ * becomes real Tailwind utilities automatically (e.g. --color-brand-red
+ * -> bg-brand-red, text-brand-red, border-brand-red, ...).
+ */
+@theme {
+  /*
+   * MILESTONE 10: colors below were adjusted from the original ported
+   * values after a real WCAG contrast audit (relative-luminance math,
+   * not eyeballing) found several combinations failing AA for their
+   * actual usage — badge text, button labels, and form-validation text
+   * were all a bit too light against their backgrounds. Each value here
+   * was solved for the specific ratio its real usage needs (4.5:1 for
+   * small text, 3.0:1 for large/bold text or UI components), not
+   * darkened arbitrarily. brand-teal, offwhite, navy, and the large
+   * StatCard values already passed and are unchanged.
+   */
+  --color-brand-red: #b73629; /* was #c0392b — badge text + error boxes on red-light bg, now 4.53:1 */
+  --color-brand-red-light: #fadbd8;
+  --color-brand-red-mid: #d24536; /* was #e74c3c — button labels + form-error text on white, now 4.52:1 */
+
+  --color-brand-teal: #0d7377;
+  --color-brand-teal-light: #e8f6f3;
+  --color-brand-teal-mid: #108670; /* was #14a085 — button labels + links on white, now 4.50:1 */
+
+  --color-brand-amber: #b84900; /* was #d35400 — badge text on amber-light bg, now 4.50:1 */
+  --color-brand-amber-light: #fdebd0;
+  --color-brand-amber-mid: #e07a21; /* was #e67e22 — StatCard large text, now 3.01:1 */
+
+  --color-brand-navy: #1a1f36;
+  --color-brand-navy-2: #2c3357;
+
+  --color-brand-green: #1c7b44; /* was #1e8449 — badge text on green-light bg, now 4.54:1 */
+  --color-brand-green-light: #d5f5e3;
+
+  --color-brand-offwhite: #f9f7f4;
+  --color-brand-gray: #6a707e; /* was #6b7280 — badge text on gray-light bg, now 4.51:1 (barely changed) */
+  --color-brand-gray-light: #f3f4f6;
+  --color-brand-gray-border: #e5e7eb;
+
+  --font-display: 'Fraunces', serif;
+  --font-sans: 'DM Sans', sans-serif;
+
+  --radius-brand: 12px;
+  --radius-brand-sm: 8px;
+
+  --shadow-brand: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-brand-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-offwhite text-brand-navy font-sans;
+    font-size: 15px;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  /* Visible keyboard focus everywhere — flagged as a Milestone-1
+     accessibility baseline in Phase 2, not something to defer. */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-teal-mid);
+    outline-offset: 2px;
+  }
+}
