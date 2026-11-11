@@ -1,0 +1,57 @@
+{
+  "name": "lifelink-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.1.1",
+    "@tanstack/react-query": "^5.62.0",
+    "zustand": "^5.0.2",
+    "react-hook-form": "^7.54.0",
+    "zod": "^3.24.1",
+    "@hookform/resolvers": "^3.9.1",
+    "clsx": "^2.1.1",
+    "recharts": "^2.15.0",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^5.0.0",
+    "socket.io-client": "^4.8.1",
+    "i18next": "^24.2.1",
+    "react-i18next": "^15.4.0",
+    "i18next-browser-languagedetector": "^8.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "@types/leaflet": "^1.9.14",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^0.21.1",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "eslint": "^9.17.0",
+    "@eslint/js": "^9.17.0",
+    "typescript-eslint": "^8.18.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "vitest": "^2.1.8",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jsdom": "^25.0.1"
+  }
+}
