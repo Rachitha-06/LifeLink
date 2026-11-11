@@ -1,1 +1,53 @@
-
+{
+  "common": {
+    "signIn": "Sign in",
+    "register": "Register",
+    "signOut": "Sign out",
+    "signingOut": "Signing out…",
+    "loading": "Loading…",
+    "cancel": "Cancel",
+    "save": "Save",
+    "language": "Language"
+  },
+  "home": {
+    "tagline": "Connecting donors and recipients",
+    "headline": "Every donation is someone's second chance.",
+    "subtext": "LifeLink matches verified blood and organ donors with recipients in need, coordinated with hospitals across the country.",
+    "statDonors": "Registered donors",
+    "statLives": "Lives connected",
+    "statHospitals": "Partner hospitals",
+    "statCities": "Cities covered",
+    "upcomingEvents": "Upcoming blood drives",
+    "ctaText": "Sign up as a donor or recipient to get started, or a hospital coordinator to help manage verification and matching."
+  },
+  "auth": {
+    "welcomeBack": "Welcome back",
+    "signInSubtitle": "Sign in to your LifeLink account.",
+    "email": "Email",
+    "password": "Password",
+    "noAccount": "Don't have an account?",
+    "createAccount": "Create your account",
+    "registerSubtitle": "Join LifeLink as a donor, recipient, or hospital coordinator.",
+    "alreadyHaveAccount": "Already have an account?"
+  },
+  "dashboard": {
+    "overview": "Overview",
+    "myDonations": "My Donations",
+    "eligibility": "Eligibility",
+    "notifications": "Notifications",
+    "myRequests": "My Requests",
+    "matchStatus": "Match Status",
+    "bloodDrives": "Blood Drives",
+    "verifyDonations": "Verify Donations",
+    "manageRequests": "Manage Requests",
+    "runMatching": "Run Matching",
+    "events": "Events",
+    "map": "Map",
+    "security": "Security",
+    "users": "Users",
+    "hospitals": "Hospitals",
+    "auditLog": "Audit Log",
+    "analytics": "Analytics",
+    "welcome": "Welcome, {{name}}."
+  }
+}
