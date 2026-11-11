@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: lifelink-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      # Secrets and DB connection details are NOT listed here on purpose —
+      # Render prompts for anything without a value when you deploy this
+      # blueprint, so you're not tempted to commit real credentials to
+      # this file. Fill them in via the Render dashboard instead.
+      - key: JWT_SECRET
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_SSL
+        value: true
+      - key: CLIENT_URL
+        sync: false
